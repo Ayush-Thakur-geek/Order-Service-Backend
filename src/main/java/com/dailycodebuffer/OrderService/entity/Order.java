@@ -26,7 +26,7 @@ public class Order {
     private long productId;
 
     @Column(name = "QUANTITY")
-    private int quantity;
+    private long quantity;
 
     @Column(name = "ORDER_DATE")
     private Instant orderDate;
