@@ -10,4 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface PaymentService {
     @PostMapping
     ResponseEntity<Long> doPayment(@RequestBody PaymentRequest paymentRequest);
+
+
 }
