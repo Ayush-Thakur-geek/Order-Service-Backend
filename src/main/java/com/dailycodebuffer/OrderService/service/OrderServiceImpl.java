@@ -75,6 +75,7 @@ public class OrderServiceImpl implements OrderService{
         } catch (Exception e) {
             log.error("Error occured in payment. Changing order status to PAYMENT_FAILED");
             orderStatus = "PAYMENT_FAILED";
+            productService.increaseQuantity(orderRequest.getProductId(), orderRequest.getQuantity());
         }
         order.setOrderStatus(orderStatus);
         orderRepository.save(order);
